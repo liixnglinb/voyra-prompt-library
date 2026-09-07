@@ -1,6 +1,6 @@
 ﻿name: Sync to Voyra
 
-# 鏈粨搴?push 鍚庯紝鎶?鎻愮ず璇嶅簱 浠ｇ爜鑷姩鍚屾杩?Voyra 涓讳粨搴撳苟瑙﹀彂閮ㄧ讲
+# 本仓库 push 后，把 提示词库 代码自动同步进 Voyra 主仓库并触发部署
 on:
   push:
     branches: [main]
@@ -22,8 +22,8 @@ jobs:
 
       - name: Sync files
         run: |
-          cp "src\pages\PromptLibrary.jsx" "voyra/src\pages\PromptLibrary.jsx"
-          cp "src\data\prompt-presets.js" "voyra/src\data\prompt-presets.js"
+          cp "src/pages/PromptLibrary.jsx" "voyra/src/pages/PromptLibrary.jsx"
+          cp "src/data/prompt-presets.js" "voyra/src/data/prompt-presets.js"
 
       - name: Commit & push to Voyra
         run: |
@@ -32,8 +32,8 @@ jobs:
           git config user.email "liixnglinb@users.noreply.github.com"
           git add voyra/src/pages/PromptLibrary.jsx voyra/src/data/prompt-presets.js
           if git diff --cached --quiet; then
-            echo "鏃犱唬鐮佸彉鏇达紝璺宠繃鎻愪氦"
+            echo "无代码变更，跳过提交"
             exit 0
           fi
-          git commit -m "chore(voyra-prompt-library): 鑷姩鍚屾鑷?voyra-prompt-library ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git commit -m "chore(voyra-prompt-library): 自动同步自 voyra-prompt-library ($(date -u +%Y-%m-%dT%H:%MZ))"
           git push

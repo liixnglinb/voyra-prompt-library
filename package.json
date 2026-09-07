@@ -2,14 +2,14 @@
     "version":  "1.0.0",
     "name":  "voyra-prompt-library",
     "license":  "MIT",
-    "description":  "鎻愮ず璇嶅簱 路 甯哥敤 AI 鎸囦护銆佹ā鏉夸笌浣跨敤鍦烘櫙涓€绔欏紡妫€绱紙Voyra 妯″潡锛墊 Prompt library",
+    "description":  "提示词库 · 常用 AI 指令、模板与使用场景一站式检索（Voyra 模块）| Prompt library",
     "keywords":  [
                      "prompt",
                      "prompts",
                      "ai",
                      "llm",
                      "react",
-                     "鎻愮ず璇嶅簱"
+                     "提示词库"
                  ],
     "private":  true
 }
