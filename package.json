@@ -1,0 +1,15 @@
+﻿{
+    "version":  "1.0.0",
+    "name":  "voyra-prompt-library",
+    "license":  "MIT",
+    "description":  "鎻愮ず璇嶅簱 路 甯哥敤 AI 鎸囦护銆佹ā鏉夸笌浣跨敤鍦烘櫙涓€绔欏紡妫€绱紙Voyra 妯″潡锛墊 Prompt library",
+    "keywords":  [
+                     "prompt",
+                     "prompts",
+                     "ai",
+                     "llm",
+                     "react",
+                     "鎻愮ず璇嶅簱"
+                 ],
+    "private":  true
+}
