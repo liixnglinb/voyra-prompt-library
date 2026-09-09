@@ -4,7 +4,7 @@
 
 **80 条精选提示词，变量填空一键复制 ｜ 80 curated prompts with variable fill-in and one-click copy**
 
-[![Sync to Voyra](https://github.com/liixnglinb/voyra-prompt-library/actions/workflows/sync-to-voyra.yml/badge.svg)](https://github.com/liixnglinb/voyra-prompt-library/actions/workflows/sync-to-voyra.yml)
+[![Sync to Voyra](https://github.com/liixnglinb/Voyra-prompt-library/actions/workflows/sync-to-voyra.yml/badge.svg)](https://github.com/liixnglinb/Voyra-prompt-library/actions/workflows/sync-to-voyra.yml)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
 ![Prompts](https://img.shields.io/badge/Prompts-80-A48830)
@@ -60,7 +60,7 @@ src/
 
 ```mermaid
 flowchart LR
-  A["本仓库<br/>voyra-prompt-library"] -->|git push| B["GitHub Actions"]
+  A["本仓库<br/>Voyra-prompt-library"] -->|git push| B["GitHub Actions"]
   B -->|同步页面与数据集| C["Voyra 主仓库"]
   C -->|自动构建| D["Cloudflare Pages"]
   D --> E["lxlrwxs.top/#/prompts"]
