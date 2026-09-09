@@ -1,4 +1,4 @@
-﻿name: Sync to Voyra
+name: Sync to Voyra
 
 # 本仓库 push 后，把 提示词库 代码自动同步进 Voyra 主仓库并触发部署
 on:
@@ -10,7 +10,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout voyra-prompt-library
+      - name: Checkout Voyra-prompt-library
         uses: actions/checkout@v4
 
       - name: Checkout Voyra main repo
@@ -28,13 +28,13 @@ jobs:
       - name: Commit & push to Voyra
         run: |
           cd voyra
-          git config user.name "voyra-prompt-library-sync[bot]"
+          git config user.name "Voyra-prompt-library-sync[bot]"
           git config user.email "liixnglinb@users.noreply.github.com"
           git add src/pages/PromptLibrary.jsx src/data/prompt-presets.js
           if git diff --cached --quiet; then
             echo "无代码变更，跳过提交"
             exit 0
           fi
-          git commit -m "chore(voyra-prompt-library): 自动同步自 voyra-prompt-library ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git commit -m "chore(Voyra-prompt-library): 自动同步自 Voyra-prompt-library ($(date -u +%Y-%m-%dT%H:%MZ))"
           git push
 
